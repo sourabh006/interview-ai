@@ -2,30 +2,19 @@
   "name": "yt-genai",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  
-
-  },
-  
-  
-
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@google/genai": "^2.21.0",
-    "bcrypt": "^6.0.0",
-    "cookie-parser": "^1.4.7",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.9.5",
-    "puppeteer": "^25.10.0",
-    "sass": "^1.104.0",
-    "zod": "^4.5.4",
-    "zod-to-json-schema": "^3.25.2"
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
   },
-  "description": ""
+  "scripts": {
+    "backend": "cd Backend && npm start",
+    "frontend": "cd Frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "dotenv": "^18.0.5"
+  }
 }
